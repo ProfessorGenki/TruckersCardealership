@@ -11,13 +11,13 @@
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Width" Value="150"/>
+            <Setter Property="Width" Value="160"/>
             <Setter Property="Margin" Value="5,5,5,5"/>
         </Style>
         <Style x:Key="TextBoxStyle" TargetType="TextBox">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Width" Value="300"/>
+            <Setter Property="Width" Value="650"/>
             <Setter Property="Margin" Value="5,5,5,5"/>
         </Style>
         <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
@@ -49,18 +49,18 @@
                 ItemsSource="{Binding ItemViewModelCollection}" 
                 SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}"
                 Visibility="{Binding ItemSelectorVisible}"
-                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Margin="645,0,-5,0">
+                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Margin="455,0,0,0">
 
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:ItemViewModel">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Image Name="image"
+                        <!--<Image Name="image"
                                Source="{x:Bind ImageSource}"
                                Visibility="{x:Bind ImageVisibility}"
                                HorizontalAlignment="Center"
                                Width="{x:Bind ImageSize}"
                                Height="{x:Bind ImageSize}"
-                               Margin="5,5,5,5" />
+                               Margin="5,5,5,5" />-->
                         <TextBlock Text="{x:Bind Description}"
                                    Margin="20,20,0,0"
                                    HorizontalAlignment="Left"
@@ -80,10 +80,10 @@
             </Grid.RowDefinitions>
 
             <!-- Properties (Details) -->
-            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite">
+            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Margin="0,0,-240,0" Grid.RowSpan="2">
 
                 <!--Car Brand-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,25,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Brand].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -93,7 +93,7 @@
                 </StackPanel>
 
                 <!--Car ID-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[ID].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -103,7 +103,7 @@
                 </StackPanel>
                 <!--Licenseplate-->
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Licenseplate].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -113,7 +113,7 @@
                 </StackPanel>
 
                 <!--Model-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Model].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -123,7 +123,7 @@
                 </StackPanel>
 
                 <!--Year-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Year].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -133,7 +133,7 @@
                 </StackPanel>
 
                 <!--Kilometers-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Kilometers].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -144,7 +144,7 @@
 
                 <!--Price-->
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Price].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -154,7 +154,7 @@
                 </StackPanel>
 
                 <!--Color-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Color].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -164,7 +164,7 @@
                 </StackPanel>
 
                 <!--Condition-->
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Condition].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
@@ -177,7 +177,7 @@
 
             <!-- Buttons (Action) -->
             <StackPanel Grid.Row="1" Grid.Column="0"
-                Orientation="Horizontal" BorderBrush="Black" BorderThickness="2,2,2,0">
+                Orientation="Horizontal" BorderBrush="Black" BorderThickness="2,2,2,2">
 
                 <!--Create button-->
                 <Button Content="Create" Style="{StaticResource ButtonStyle}"

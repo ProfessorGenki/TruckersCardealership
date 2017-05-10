@@ -21,10 +21,10 @@ namespace MVVMStarter.ViewModels.Domain.Car
             get { return 18; }
         }
 
-        public override string ImageSource
-        {
-            get { return String.Empty; }
-        }
+        //public override string ImageSource
+        //{
+        //    get { return String.Empty; }
+        //}
 
         public override int ImageSize
         {
