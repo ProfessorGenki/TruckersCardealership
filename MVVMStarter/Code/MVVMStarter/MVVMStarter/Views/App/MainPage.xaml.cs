@@ -27,13 +27,22 @@ namespace MVVMStarter.Views.App
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           
+            if (ImageView.IsSelected)
+            {
+                AppFrame.Navigate(typeof(App.ImageView));
+            }
             if (CustomerView.IsSelected)
             {
                 AppFrame.Navigate(typeof(Domain.Customer.View));
             }
-            if (ImageView.IsSelected)
+            if (CarView.IsSelected)
             {
-                AppFrame.Navigate(typeof(App.ImageView));
+                AppFrame.Navigate(typeof(Domain.Car.View));
+            }
+            if (SalespersonView.IsSelected)
+            {
+                AppFrame.Navigate(typeof(Domain.SalesPerson.View));
             }
             string nameOfSelection = ((ListBoxItem)e.AddedItems[0]).Name;
             if (nameOfSelection == "Load")
