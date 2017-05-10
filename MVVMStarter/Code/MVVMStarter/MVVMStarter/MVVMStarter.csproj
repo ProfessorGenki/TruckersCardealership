@@ -90,13 +90,7 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
-    <Compile Include="Views\Domain\Car\View.xaml.cs">
-      <DependentUpon>View.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Domain\Customer\View.xaml.cs">
-      <DependentUpon>View.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Domain\Salesperson\View.xaml.cs">
       <DependentUpon>View.xaml</DependentUpon>
     </Compile>
     <None Include="project.json" />
@@ -244,11 +238,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Domain\Car\View.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Domain\Salesperson\View.xaml">
+    <Page Include="Views\Domain\Customer\View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,6 +249,7 @@
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
     <Folder Include="Validators\Base\" />
+    <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
