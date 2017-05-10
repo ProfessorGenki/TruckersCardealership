@@ -256,6 +256,9 @@
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
     <Folder Include="Validators\Base\" />
+    <Folder Include="Views\Domain\Car\" />
+    <Folder Include="Views\Domain\SalesPerson\" />
+    <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
