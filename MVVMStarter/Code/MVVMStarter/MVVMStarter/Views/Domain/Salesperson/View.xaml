@@ -111,11 +111,11 @@
                 <!--MYPROPERTY Adress-->
                 <StackPanel Margin="35,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Adress].Description}"/>
+                                   Text="{Binding ViewControlStates[Address].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Adress].Enabled}"
-                                 Visibility="{Binding ViewControlStates[Adress].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Adress, Mode=TwoWay}" />
+                                 IsEnabled="{Binding ViewControlStates[Address].Enabled}"
+                                 Visibility="{Binding ViewControlStates[Address].VisibilityState}"
+                                 Text="{Binding DetailsViewModel.Address, Mode=TwoWay}" />
                 </StackPanel>
 
                 <!--MYPROPERTY Email-->
