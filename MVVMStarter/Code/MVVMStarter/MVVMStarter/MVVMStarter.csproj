@@ -105,6 +105,7 @@
     <Compile Include="Models\App\FilterManager.cs" />
     <Compile Include="Models\App\ObjectProvider.cs" />
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
+    <Compile Include="Models\Domain\Salesperson\SPCatalog.cs" />
     <Compile Include="Views\Domain\Customer\Customer.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
