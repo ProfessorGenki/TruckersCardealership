@@ -128,7 +128,6 @@
     <Compile Include="ViewModels\Domain\SalesPerson\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\SalesPerson\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\SalesPerson\ViewModelFactory.cs" />
-    <Compile Include="Views\Domain\Customer\Customer.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
     <Compile Include="Persistency\Base\HardCodedSourceBase.cs" />
@@ -236,6 +235,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\App\OpeningView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Domain\Customer\View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
