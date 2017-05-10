@@ -90,6 +90,9 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
+    <Compile Include="Views\Domain\Car\View.xaml.cs">
+      <DependentUpon>View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Domain\Customer\View.xaml.cs">
       <DependentUpon>View.xaml</DependentUpon>
     </Compile>
@@ -122,9 +125,6 @@
     <Compile Include="ViewModels\Domain\Car\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Car\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\Car\ViewModelFactory.cs" />
-    <Compile Include="Views\Domain\Car\View.xaml.cs">
-      <DependentUpon>View.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Domain\Salesperson\SPCatalog.cs" />
     <Compile Include="ViewModels\Domain\SalesPerson\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\SalesPerson\ItemViewModel.cs" />
@@ -242,6 +242,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Domain\Car\View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Domain\Car\" />
@@ -249,11 +253,6 @@
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
     <Folder Include="Validators\Base\" />
-    <Folder Include="ViewModels\Domain\Customer\" />
-    <Folder Include="ViewModels\Domain\Car\" />
-    <Folder Include="ViewModels\Domain\Salesperson\" />
-    <Folder Include="ViewModels\Domain\Customer\" />
-    <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
