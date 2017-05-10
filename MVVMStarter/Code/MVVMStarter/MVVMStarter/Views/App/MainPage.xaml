@@ -40,20 +40,20 @@
                     </ListBoxItem>
                     <ListBoxItem Name="CustomerView">
                         <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Customer</TextBlock>
+                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Customer</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="CarView">
                         <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Car</TextBlock>
+                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Car</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="SalespersonView">
                         <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Salesperson</TextBlock>
+                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Salesperson</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="Load">
