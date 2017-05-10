@@ -107,6 +107,11 @@
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
     <Compile Include="Models\Domain\Customer\Customer.cs" />
     <Compile Include="Models\Domain\Salesperson\SPCatalog.cs" />
+    <Compile Include="ViewModels\Domain\SalesPerson\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\SalesPerson\ItemViewModel.cs" />
+    <Compile Include="ViewModels\Domain\SalesPerson\MasterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\SalesPerson\MasterViewModel.cs" />
+    <Compile Include="ViewModels\Domain\SalesPerson\ViewModelFactory.cs" />
     <Compile Include="Views\Domain\Customer\Customer.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
@@ -151,9 +156,6 @@
     <Compile Include="Views\App\OpeningView.xaml.cs">
       <DependentUpon>OpeningView.xaml</DependentUpon>
     </Compile>
-    <None Include="Views\Domain\Template\View.xaml.cs">
-      <DependentUpon>View.xaml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -221,10 +223,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <None Include="Views\Domain\Template\View.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Domain\Car\" />
@@ -235,9 +233,9 @@
     <Folder Include="Validators\Base\" />
     <Folder Include="ViewModels\Domain\Car\" />
     <Folder Include="ViewModels\Domain\Customer\" />
-    <Folder Include="ViewModels\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
+    <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
