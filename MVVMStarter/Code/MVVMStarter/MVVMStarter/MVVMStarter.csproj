@@ -105,7 +105,17 @@
     <Compile Include="Models\App\FilterManager.cs" />
     <Compile Include="Models\App\ObjectProvider.cs" />
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
+    <Compile Include="Models\Domain\Car\Car.cs" />
+    <Compile Include="Models\Domain\Car\CarCatalog.cs" />
     <Compile Include="Models\Domain\Customer\Customer.cs" />
+    <Compile Include="ViewModels\Domain\Car\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Car\ItemViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Car\MasterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Car\MasterViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Car\ViewModelFactory.cs" />
+    <Compile Include="Views\Domain\Car\View.xaml.cs">
+      <DependentUpon>View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Domain\Customer\Customer.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
@@ -224,18 +234,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Include="Views\Domain\Car\View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Domain\Car\" />
     <Folder Include="Assets\Domain\Customer\" />
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
-    <Folder Include="Models\Domain\Car\" />
     <Folder Include="Validators\Base\" />
-    <Folder Include="ViewModels\Domain\Car\" />
     <Folder Include="ViewModels\Domain\Customer\" />
     <Folder Include="ViewModels\Domain\Salesperson\" />
-    <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
