@@ -223,8 +223,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\Domain\Car\" />
+    <Folder Include="Assets\Domain\Customer\" />
+    <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
+    <Folder Include="Models\Domain\Car\" />
+    <Folder Include="Models\Domain\Customer\" />
+    <Folder Include="Models\Domain\Salesperson\" />
     <Folder Include="Validators\Base\" />
+    <Folder Include="ViewModels\Domain\Car\" />
+    <Folder Include="ViewModels\Domain\Customer\" />
+    <Folder Include="ViewModels\Domain\Salesperson\" />
+    <Folder Include="Views\Domain\Car\" />
+    <Folder Include="Views\Domain\Customer\" />
+    <Folder Include="Views\Domain\Salesperson\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
