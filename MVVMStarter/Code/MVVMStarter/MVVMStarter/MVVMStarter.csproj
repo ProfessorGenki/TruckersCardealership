@@ -106,6 +106,7 @@
     <Compile Include="Models\App\ObjectProvider.cs" />
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
+    <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
     <Compile Include="Persistency\Base\HardCodedSourceBase.cs" />
     <Compile Include="Validators\App\ValidationException.cs" />
     <Compile Include="Common\UserActionPresenter.cs" />
@@ -229,7 +230,6 @@
     <Folder Include="Controllers\Domain\" />
     <Folder Include="Models\Domain\Car\" />
     <Folder Include="Models\Domain\Customer\" />
-    <Folder Include="Models\Domain\Salesperson\" />
     <Folder Include="Validators\Base\" />
     <Folder Include="ViewModels\Domain\Car\" />
     <Folder Include="ViewModels\Domain\Customer\" />
