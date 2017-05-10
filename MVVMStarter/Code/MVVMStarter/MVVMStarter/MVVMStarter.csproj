@@ -105,6 +105,7 @@
     <Compile Include="Models\App\FilterManager.cs" />
     <Compile Include="Models\App\ObjectProvider.cs" />
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
+    <Compile Include="Views\Domain\Customer\Customer.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Persistency\Base\HardCodedSourceBase.cs" />
     <Compile Include="Validators\App\ValidationException.cs" />
@@ -235,7 +236,6 @@
     <Folder Include="ViewModels\Domain\Customer\" />
     <Folder Include="ViewModels\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Car\" />
-    <Folder Include="Views\Domain\Customer\" />
     <Folder Include="Views\Domain\Salesperson\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
