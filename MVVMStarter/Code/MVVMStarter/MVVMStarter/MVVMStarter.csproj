@@ -238,6 +238,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Domain\Customer\View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Domain\Car\" />
@@ -247,6 +251,8 @@
     <Folder Include="Validators\Base\" />
     <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\SalesPerson\" />
+    <Folder Include="Views\Domain\Car\" />
+    <Folder Include="Views\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
