@@ -32,12 +32,12 @@
                    CompactPaneLength="60">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
-                    <!--<ListBoxItem Name="_REPLACEME_View">
+                    <ListBoxItem Name="CustomerView">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/_REPLACEME_/_REPLACEME_.jpg"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">_REPLACEME_s</TextBlock>
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Customer</TextBlock>
                         </StackPanel>
-                    </ListBoxItem>-->
+                    </ListBoxItem>
                     <ListBoxItem Name="ImageView">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Image.png"/>

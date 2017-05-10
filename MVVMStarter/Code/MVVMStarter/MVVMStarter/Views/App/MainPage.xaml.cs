@@ -27,10 +27,10 @@ namespace MVVMStarter.Views.App
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // if (_REPLACEME_View.IsSelected)
-            // {
-            //     AppFrame.Navigate(typeof(Domain._REPLACEME_.View));
-            // }
+            if (CustomerView.IsSelected)
+            {
+                AppFrame.Navigate(typeof(Domain.Customer.View));
+            }
             if (ImageView.IsSelected)
             {
                 AppFrame.Navigate(typeof(App.ImageView));

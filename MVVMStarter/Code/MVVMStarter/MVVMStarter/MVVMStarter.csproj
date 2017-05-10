@@ -89,6 +89,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
+    <Compile Include="Views\Domain\Customer\View.xaml.cs">
+      <DependentUpon>View.xaml</DependentUpon>
+    </Compile>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -105,8 +109,12 @@
     <Compile Include="Models\App\FilterManager.cs" />
     <Compile Include="Models\App\ObjectProvider.cs" />
     <Compile Include="Models\Base\HardCodedObjectsBase.cs" />
+    <Compile Include="Models\Domain\Customer\Catalog.cs" />
     <Compile Include="Models\Domain\Customer\Customer.cs" />
-    <Compile Include="Views\Domain\Customer\Customer.cs" />
+    <Compile Include="ViewModels\Domain\Customer\MasterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Customer\MasterViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Customer\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Customer\ItemViewModel.cs" />
     <None Include="Models\Domain\Template\HardCodedObjects.cs" />
     <Compile Include="Models\Domain\Salesperson\SalesPerson.cs" />
     <Compile Include="Persistency\Base\HardCodedSourceBase.cs" />
@@ -224,6 +232,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Include="Views\Domain\Customer\View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Domain\Car\" />
@@ -233,7 +245,6 @@
     <Folder Include="Models\Domain\Car\" />
     <Folder Include="Validators\Base\" />
     <Folder Include="ViewModels\Domain\Car\" />
-    <Folder Include="ViewModels\Domain\Customer\" />
     <Folder Include="ViewModels\Domain\Salesperson\" />
     <Folder Include="Views\Domain\Car\" />
     <Folder Include="Views\Domain\Salesperson\" />
