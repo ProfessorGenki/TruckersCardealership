@@ -1,5 +1,5 @@
 ﻿using MVVMStarter.ViewModels.Base;
-using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
+using SalespersonClass = MVVMStarter.Models.Domain.Salesperson.Salesperson;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -9,9 +9,9 @@ using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
 /// 4) replace the text _REPLACEME_ with the name of your domain
 /// 5) Delete this comment
 /// </summary>
-namespace MVVMStarter.ViewModels.Domain.SalesPerson
+namespace MVVMStarter.ViewModels.Domain.Salesperson
 {
-    public class ItemViewModel : ItemViewModelBase<SalesPersonClass>
+    public class ItemViewModel : ItemViewModelBase<SalespersonClass>
     {
         // Override any of the below properties, if you wish to
         // replace the default implementation with your own
@@ -42,7 +42,7 @@ namespace MVVMStarter.ViewModels.Domain.SalesPerson
         //    get { return true; }
         //}
 
-        public ItemViewModel(SalesPersonClass obj) : base(obj)
+        public ItemViewModel(SalespersonClass obj) : base(obj)
         {
         }
     }

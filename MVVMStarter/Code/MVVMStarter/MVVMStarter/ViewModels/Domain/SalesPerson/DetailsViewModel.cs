@@ -1,6 +1,6 @@
 ﻿using MVVMStarter.Validators.App;
 using MVVMStarter.ViewModels.Base;
-using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
+using SalespersonClass = MVVMStarter.Models.Domain.Salesperson.Salesperson;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -10,9 +10,9 @@ using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
 /// 4) replace the text _REPLACEME_ with the name of your domain
 /// 5) Delete this comment
 /// </summary>
-namespace MVVMStarter.ViewModels.Domain.SalesPerson
+namespace MVVMStarter.ViewModels.Domain.Salesperson
 {
-    public class DetailsViewModel : DetailsViewModelBase<SalesPersonClass>
+    public class DetailsViewModel : DetailsViewModelBase<SalespersonClass>
     {
         //// Template for validated property (may throw ValidationException) 
         //public string ValidatedName
@@ -194,7 +194,7 @@ namespace MVVMStarter.ViewModels.Domain.SalesPerson
             }
         }
 
-        public DetailsViewModel(SalesPersonClass obj) : base(obj)
+        public DetailsViewModel(SalespersonClass obj) : base(obj)
         {
         }
     }

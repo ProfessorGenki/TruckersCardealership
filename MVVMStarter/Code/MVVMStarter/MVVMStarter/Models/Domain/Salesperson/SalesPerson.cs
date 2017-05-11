@@ -10,9 +10,9 @@ using MVVMStarter.Validators.App;
 /// 4) replace the text _REPLACEME_ with the name of your domain
 /// 5) Delete this comment
 /// </summary>
-namespace MVVMStarter.Models.Domain.SalesPerson
+namespace MVVMStarter.Models.Domain.Salesperson
 {
-    public class SalesPerson : DomainClassBase
+    public class Salesperson : DomainClassBase
     {
         private string _name;
         private string _email;
@@ -20,6 +20,7 @@ namespace MVVMStarter.Models.Domain.SalesPerson
         private string _address;
         private int _salespersonId;
         private double _commission;
+
 
         public string Name { get { return _name; } set { _name = value; } }
         public string Email { get { return _email; } set { _email = value; } }

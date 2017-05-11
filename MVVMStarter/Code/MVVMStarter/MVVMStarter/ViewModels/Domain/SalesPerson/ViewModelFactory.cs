@@ -1,5 +1,5 @@
 ﻿using MVVMStarter.ViewModels.Base;
-using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
+using SalespersonClass = MVVMStarter.Models.Domain.Salesperson.Salesperson;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -9,21 +9,21 @@ using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
 /// 4) replace the text _REPLACEME_ with the name of your domain
 /// 5) Delete this comment
 /// </summary>
-namespace MVVMStarter.ViewModels.Domain.SalesPerson
+namespace MVVMStarter.ViewModels.Domain.Salesperson
 {
-    public class ViewModelFactory : ViewModelFactoryBase<SalesPersonClass>
+    public class ViewModelFactory : ViewModelFactoryBase<SalespersonClass>
     {
-        public override DetailsViewModelBase<SalesPersonClass> CreateDetailsViewModel(SalesPersonClass obj)
+        public override DetailsViewModelBase<SalespersonClass> CreateDetailsViewModel(SalespersonClass obj)
         {
             return new DetailsViewModel(obj);
         }
 
-        public override ItemViewModelBase<SalesPersonClass> CreateItemViewModel(SalesPersonClass obj)
+        public override ItemViewModelBase<SalespersonClass> CreateItemViewModel(SalespersonClass obj)
         {
             return new ItemViewModel(obj);
         }
 
-        public override MasterViewModelBase<SalesPersonClass> CreateMasterViewModel()
+        public override MasterViewModelBase<SalespersonClass> CreateMasterViewModel()
         {
             return new MasterViewModel();
         }

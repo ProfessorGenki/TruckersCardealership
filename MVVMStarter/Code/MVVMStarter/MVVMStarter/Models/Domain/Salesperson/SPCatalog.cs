@@ -9,9 +9,9 @@ using MVVMStarter.Persistency.Base;
 /// 4) replace the text _REPLACEME_ with the name of your domain
 /// 5) Delete this comment
 /// </summary>
-namespace MVVMStarter.Models.Domain.SalesPerson
+namespace MVVMStarter.Models.Domain.Salesperson
 {
-    public class SPCatalog : CatalogBase<SalesPerson>
+    public class SPCatalog : CatalogBase<Salesperson>
     {
         #region Model Singleton implementation
         private static SPCatalog _instance = null;
@@ -29,7 +29,7 @@ namespace MVVMStarter.Models.Domain.SalesPerson
         /// <summary>
         /// Use a file-based persistent source
         /// </summary>
-        private SPCatalog() : base(new CollectionBase<SalesPerson>(), new FileSourceBase<SalesPerson>())
+        private SPCatalog() : base(new CollectionBase<Salesperson>(), new FileSourceBase<Salesperson>())
         {
         }
         #endregion

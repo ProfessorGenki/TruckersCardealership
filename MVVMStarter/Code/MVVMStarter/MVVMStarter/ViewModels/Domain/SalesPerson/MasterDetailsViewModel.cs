@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using MVVMStarter.ViewModels.App;
 using MVVMStarter.ViewModels.Base;
-using SalesPersonClass = MVVMStarter.Models.Domain.SalesPerson.SalesPerson;
+using SalespersonClass = MVVMStarter.Models.Domain.Salesperson.Salesperson;
 
 
-namespace MVVMStarter.ViewModels.Domain.SalesPerson
+namespace MVVMStarter.ViewModels.Domain.Salesperson
 {
-    public class MasterDetailsViewModel : MasterDetailsViewModelBase<SalesPersonClass>
+    public class MasterDetailsViewModel : MasterDetailsViewModelBase<SalespersonClass>
     {
         public MasterDetailsViewModel()
-            : base(new ViewModelFactory(), Models.Domain.SalesPerson.SPCatalog.Instance)
+            : base(new ViewModelFactory(), Models.Domain.Salesperson.SPCatalog.Instance)
         {
             //// Use the below code as a template for setting up default
             //// behavior for your GUI controls
@@ -31,15 +31,15 @@ namespace MVVMStarter.ViewModels.Domain.SalesPerson
 
             List<string> fixedProperties = new List<string>();
             // Add names of "fixed" (cannot be changed after creation) properties here
-            fixedProperties.Add(nameof(SalesPersonClass.SalespersonID));
-            fixedProperties.Add(nameof(SalesPersonClass.Name));
+            fixedProperties.Add(nameof(SalespersonClass.SalespersonID));
+            fixedProperties.Add(nameof(SalespersonClass.Name));
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
-            nonFixedKeyProperties.Add(nameof(SalesPersonClass.Address));
-            nonFixedKeyProperties.Add(nameof(SalesPersonClass.Commission));
-            nonFixedKeyProperties.Add(nameof(SalesPersonClass.Phone));
-            nonFixedKeyProperties.Add(nameof(SalesPersonClass.Email));
+            nonFixedKeyProperties.Add(nameof(SalespersonClass.Address));
+            nonFixedKeyProperties.Add(nameof(SalespersonClass.Commission));
+            nonFixedKeyProperties.Add(nameof(SalespersonClass.Phone));
+            nonFixedKeyProperties.Add(nameof(SalespersonClass.Email));
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);
