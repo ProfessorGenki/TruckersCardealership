@@ -15,7 +15,7 @@ namespace MVVMStarter.ViewModels.Domain.Car
     public class MasterDetailsViewModel : MasterDetailsViewModelBase<CarClass>
     {
         public MasterDetailsViewModel()
-            : base(new ViewModelFactory(), Models.Domain.Car.CarCatalog.Instance)
+            : base(new ViewModelFactory(), Models.Domain.Car.Catalog.Instance)
         {
 
 

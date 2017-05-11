@@ -8,7 +8,7 @@ namespace MVVMStarter.Models.Domain.Sale
     {
         private int _carKey;
         private int _customerKey;
-        private int _employeeKey;
+        private int _salespersonKey;
 
         private DateTimeOffset _salesDate;
         private int _saleID;
@@ -31,10 +31,10 @@ namespace MVVMStarter.Models.Domain.Sale
             set { _customerKey = value; }
         }
 
-        public int SalespersoneKey
+        public int SalespersonKey
         {
-            get { return _employeeKey; }
-            set { _employeeKey = value; }
+            get { return _salespersonKey; }
+            set { _salespersonKey = value; }
         }
 
         public DateTimeOffset SalesDate
@@ -53,7 +53,7 @@ namespace MVVMStarter.Models.Domain.Sale
         {
             _carKey = NullKey;
             _customerKey = NullKey;
-            _employeeKey = NullKey;
+            _salespersonKey = NullKey;
         }
     }
 }

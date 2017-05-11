@@ -11,7 +11,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
     {
         private ObservableCollection<Car.ItemViewModel> _observableCollectionCars;
         private ObservableCollection<Customer.ItemViewModel> _observableCollectionCustomers;
-        private ObservableCollection<Salesperson.ItemViewModel> _observableCollectionSalesperson;
+        private ObservableCollection<Salesperson.ItemViewModel> _observableCollectionSalespersons;
 
         public DateTimeOffset Date
         {
@@ -45,7 +45,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
 
         public ObservableCollection<Salesperson.ItemViewModel> CollectionSalesPerson
         {
-            get { return _observableCollectionSalesperson; }
+            get { return _observableCollectionSalespersons; }
         }
 
         public Car.ItemViewModel SelectedCar
@@ -81,7 +81,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             {
                 if (value != null)
                 {
-                    DomainObject.SalespersoneKey = value.DomainObject.Key;
+                    DomainObject.SalespersonKey = value.DomainObject.Key;
                 }
                 OnPropertyChanged();
             }
@@ -110,7 +110,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
                 }
             }
 
-            return null;
+            return null; 
         }
 
         private Salesperson.ItemViewModel GetSalesPersonItemViewModel(int key)
@@ -132,7 +132,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             _observableCollectionCustomers = new ObservableCollection<Customer.ItemViewModel>();
             _observableCollectionSalespersons = new ObservableCollection<Salesperson.ItemViewModel>();
 
-            foreach (var car in ObjectProvider.Catalog.All)
+            foreach (var car in ObjectProvider.CarCatalog.All)
             {
                 _observableCollectionCars.Add(new Car.ItemViewModel(car));
             }
@@ -142,7 +142,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
                 _observableCollectionCustomers.Add(new Customer.ItemViewModel(customer));
             }
 
-            foreach (var employee in ObjectProvider.Catalog.All)
+            foreach (var employee in ObjectProvider.SalespersonCatalog.All)
             {
                 _observableCollectionSalespersons.Add(new Salesperson.ItemViewModel(employee));
             }

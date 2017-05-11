@@ -1,9 +1,7 @@
 ﻿namespace MVVMStarter.Models.App
 {
-    /// <summary>
-    /// This class just provides a place to define shorthand static
-    /// methods for accessing the domain-specific catalogs.
-    /// </summary>
+
+    //Bruger da vi vha. et enkelt navn eks. ImageCatalog kan referer til hvor cataloget er gemt.
     public class ObjectProvider
     {
         public static Images.App.Catalog ImageCatalog
@@ -11,9 +9,9 @@
             get { return Images.App.Catalog.Instance; }
         }
 
-        public static Domain.Car.CarCatalog Carcatalog
+        public static Domain.Car.Catalog CarCatalog
         {
-            get { return Domain.Car.CarCatalog.Instance; }
+            get { return Domain.Car.Catalog.Instance; }
         }
 
         public static Domain.Customer.Catalog CustomerCatalog
@@ -21,9 +19,9 @@
             get { return Domain.Customer.Catalog.Instance; }
         }
 
-        public static Domain.Salesperson.SPCatalog SalespersonCatalog
+        public static Domain.Salesperson.Catalog SalespersonCatalog
         {
-            get { return Domain.Salesperson.SPCatalog.Instance; }
+            get { return Domain.Salesperson.Catalog.Instance; }
         }
 
         public static Domain.Sale.Catalog SaleCatalog
