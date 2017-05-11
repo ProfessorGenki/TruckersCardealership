@@ -11,7 +11,7 @@
             get { return Images.App.Catalog.Instance; }
         }
 
-        public static Domain.Car. CarCatalog Carcatalog
+        public static Domain.Car.CarCatalog Carcatalog
         {
             get { return Domain.Car.CarCatalog.Instance; }
         }
@@ -21,7 +21,7 @@
             get { return Domain.Customer.Catalog.Instance; }
         }
 
-        public static Domain.Salesperson.SPCatalog SPCatalog
+        public static Domain.Salesperson.SPCatalog SalespersonCatalog
         {
             get { return Domain.Salesperson.SPCatalog.Instance; }
         }

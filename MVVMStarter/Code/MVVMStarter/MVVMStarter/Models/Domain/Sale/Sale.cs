@@ -31,7 +31,7 @@ namespace MVVMStarter.Models.Domain.Sale
             set { _customerKey = value; }
         }
 
-        public int EmployeeKey
+        public int SalespersoneKey
         {
             get { return _employeeKey; }
             set { _employeeKey = value; }

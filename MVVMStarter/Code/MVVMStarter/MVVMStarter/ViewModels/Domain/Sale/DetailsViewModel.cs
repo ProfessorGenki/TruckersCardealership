@@ -11,7 +11,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
     {
         private ObservableCollection<Car.ItemViewModel> _observableCollectionCars;
         private ObservableCollection<Customer.ItemViewModel> _observableCollectionCustomers;
-        private ObservableCollection<Salesperson.ItemViewModel> _observableCollectionSalespersons;
+        private ObservableCollection<Salesperson.ItemViewModel> _observableCollectionSalesperson;
 
         public DateTimeOffset Date
         {
@@ -23,15 +23,15 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             }
         }
 
-        public int Price
-        {
-            get { return DomainObject.Price; }
-            set
-            {
-                DomainObject.Price = value;
-                OnPropertyChanged();
-            }
-        }
+        //public int Price
+        //{
+        //    get { return DomainObject.Price; }
+        //    set
+        //    {
+        //        DomainObject.Price = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public ObservableCollection<Car.ItemViewModel> CollectionCars
         {
@@ -81,7 +81,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             {
                 if (value != null)
                 {
-                    DomainObject.EmployeeKey = value.DomainObject.Key;
+                    DomainObject.SalespersoneKey = value.DomainObject.Key;
                 }
                 OnPropertyChanged();
             }
