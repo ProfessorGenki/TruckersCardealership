@@ -89,6 +89,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Compile Include="Models\Domain\Sale\Catalog.cs" />
+    <Compile Include="Models\Domain\Sale\Sale.cs" />
     <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Sale\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sale\ItemViewModel.cs" />
@@ -267,7 +269,6 @@
     <Folder Include="Assets\Domain\Customer\" />
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
-    <Folder Include="Models\Domain\Sale\" />
     <Folder Include="Validators\Base\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
