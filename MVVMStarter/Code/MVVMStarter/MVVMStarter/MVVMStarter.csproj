@@ -262,6 +262,7 @@
     <Folder Include="Assets\Domain\Customer\" />
     <Folder Include="Assets\Domain\Salesperson\" />
     <Folder Include="Controllers\Domain\" />
+    <Folder Include="Models\Domain\Sale\" />
     <Folder Include="Validators\Base\" />
     <Folder Include="Views\Domain\Template\" />
   </ItemGroup>
