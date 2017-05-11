@@ -11,17 +11,17 @@ using MVVMStarter.Persistency.Base;
 /// </summary>
 namespace MVVMStarter.Models.Domain.Salesperson
 {
-    public class SPCatalog : CatalogBase<Salesperson>
+    public class Catalog : CatalogBase<Salesperson>
     {
         #region Model Singleton implementation
-        private static SPCatalog _instance = null;
+        private static Catalog _instance = null;
 
-        public static SPCatalog Instance
+        public static Catalog Instance
         {
             get
             {
                 if (_instance != null) return _instance;
-                _instance = new SPCatalog();
+                _instance = new Catalog();
                 return _instance;
             }
         }
@@ -29,7 +29,7 @@ namespace MVVMStarter.Models.Domain.Salesperson
         /// <summary>
         /// Use a file-based persistent source
         /// </summary>
-        private SPCatalog() : base(new CollectionBase<Salesperson>(), new FileSourceBase<Salesperson>())
+        private Catalog() : base(new CollectionBase<Salesperson>(), new FileSourceBase<Salesperson>())
         {
         }
         #endregion

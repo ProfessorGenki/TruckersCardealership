@@ -9,7 +9,7 @@ namespace MVVMStarter.ViewModels.Domain.Salesperson
     public class MasterDetailsViewModel : MasterDetailsViewModelBase<SalespersonClass>
     {
         public MasterDetailsViewModel()
-            : base(new ViewModelFactory(), Models.Domain.Salesperson.SPCatalog.Instance)
+            : base(new ViewModelFactory(), Models.Domain.Salesperson.Catalog.Instance)
         {
             //// Use the below code as a template for setting up default
             //// behavior for your GUI controls

@@ -132,7 +132,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             _observableCollectionCustomers = new ObservableCollection<Customer.ItemViewModel>();
             _observableCollectionSalespersons = new ObservableCollection<Salesperson.ItemViewModel>();
 
-            foreach (var car in ObjectProvider.Carcatalog.All)
+            foreach (var car in ObjectProvider.Catalog.All)
             {
                 _observableCollectionCars.Add(new Car.ItemViewModel(car));
             }
@@ -142,7 +142,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
                 _observableCollectionCustomers.Add(new Customer.ItemViewModel(customer));
             }
 
-            foreach (var employee in ObjectProvider.SPCatalog.All)
+            foreach (var employee in ObjectProvider.Catalog.All)
             {
                 _observableCollectionSalespersons.Add(new Salesperson.ItemViewModel(employee));
             }

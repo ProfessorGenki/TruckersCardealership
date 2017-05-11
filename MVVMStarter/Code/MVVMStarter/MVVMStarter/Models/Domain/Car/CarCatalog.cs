@@ -12,17 +12,17 @@ using MVVMStarter.Persistency.Base;
 /// </summary>
 namespace MVVMStarter.Models.Domain.Car
 {
-    public class CarCatalog : CatalogBase<Car>
+    public class Catalog : CatalogBase<Car>
     {
         #region Model Singleton implementation
-        private static CarCatalog _instance = null;
+        private static Catalog _instance = null;
 
-        public static CarCatalog Instance
+        public static Catalog Instance
         {
             get
             {
                 if (_instance != null) return _instance;
-                _instance = new CarCatalog();
+                _instance = new Catalog();
                 return _instance;
             }
         }
@@ -30,7 +30,7 @@ namespace MVVMStarter.Models.Domain.Car
         /// <summary>
         /// Use a file-based persistent source
         /// </summary>
-        private CarCatalog() : base(new CollectionBase<Car>(), new FileSourceBase<Car>())
+        private Catalog() : base(new CollectionBase<Car>(), new FileSourceBase<Car>())
         {
         }
         #endregion
