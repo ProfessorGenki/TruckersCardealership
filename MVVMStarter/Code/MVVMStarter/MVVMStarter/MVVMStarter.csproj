@@ -135,7 +135,7 @@
     <Compile Include="ViewModels\Domain\Car\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Car\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\Car\ViewModelFactory.cs" />
-    <Compile Include="Models\Domain\Salesperson\SPCatalog.cs" />
+    <Compile Include="Models\Domain\Salesperson\Catalog.cs" />
     <Compile Include="ViewModels\Domain\Salesperson\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Salesperson\ItemViewModel.cs" />
     <Compile Include="ViewModels\Domain\Salesperson\MasterDetailsViewModel.cs" />
