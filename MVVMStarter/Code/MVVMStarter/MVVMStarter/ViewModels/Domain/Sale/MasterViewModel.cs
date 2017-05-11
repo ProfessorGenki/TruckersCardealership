@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MVVMStarter.ViewModels.Base;
+using SaleClass = MVVMStarter.Models.Domain.Sale.Sale;
 
 namespace MVVMStarter.ViewModels.Domain.Sale
 {
-    class MasterViewModel
+    public class MasterViewModel : MasterViewModelBase<SaleClass>
     {
     }
 }
