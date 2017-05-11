@@ -47,8 +47,8 @@
     <!-- Outermost Grid has two columns and one row -->
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="900"/>
+            <ColumnDefinition Width="380"/>
         </Grid.ColumnDefinitions>
 
         <!-- ListView (Master) -->
@@ -57,7 +57,7 @@
                 ItemsSource="{Binding ItemViewModelCollection}" 
                 SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}"
                 Visibility="{Binding ItemSelectorVisible}"
-                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Margin="455,0,0,0">
+                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Margin="0,0,-70,0">
 
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:ItemViewModel">
@@ -80,7 +80,7 @@
         </ListView>
 
         <!-- Inner Grid has one column and three rows -->
-        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,427,0" Grid.ColumnSpan="2">
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="100"/>
@@ -89,7 +89,7 @@
 
 
             <!-- Properties (Details) -->
-            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Margin="0,0,-30,0" Grid.RowSpan="1">
+            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Grid.RowSpan="1">
 
                 <!--MYPROPERTY Name-->
                 <StackPanel Margin="25,25,0,0" Orientation="Horizontal">
@@ -104,7 +104,7 @@
                 <!--MYPROPERTY Adress-->
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Adress].Description}"/>
+                                   Text="Address"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
                                  IsEnabled="{Binding ViewControlStates[Adress].Enabled}"
                                  Visibility="{Binding ViewControlStates[Adress].VisibilityState}"
@@ -114,7 +114,7 @@
                 <!--MYPROPERTY Email-->
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Email].Description}"/>
+                                   Text="E-mail"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
                                  IsEnabled="{Binding ViewControlStates[Email].Enabled}"
                                  Visibility="{Binding ViewControlStates[Email].VisibilityState}"
@@ -124,7 +124,7 @@
                 <!--MYPROPERTY Phonenumber-->
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Phonenumber].Description}"/>
+                                   Text="Phone"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
                                  IsEnabled="{Binding ViewControlStates[Phonenumber].Enabled}"
                                  Visibility="{Binding ViewControlStates[Phonenumber].VisibilityState}"
@@ -134,7 +134,7 @@
                 <!--MYPROPERTY ID-->
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[ID].Description}"/>
+                                   Text="Costumer ID"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
                                  IsEnabled="{Binding ViewControlStates[ID].Enabled}"
                                  Visibility="{Binding ViewControlStates[ID].VisibilityState}"
