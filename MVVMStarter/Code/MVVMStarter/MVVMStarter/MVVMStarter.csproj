@@ -90,6 +90,11 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
+    <Compile Include="ViewModels\Domain\Sale\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Sale\ItemViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Sale\MasterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Sale\MasterViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Sale\ViewModelFactory.cs" />
     <Compile Include="Views\Domain\Car\View.xaml.cs">
       <DependentUpon>View.xaml</DependentUpon>
     </Compile>
