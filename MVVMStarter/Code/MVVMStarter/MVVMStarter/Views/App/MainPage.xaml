@@ -56,6 +56,12 @@
                             <TextBlock FontSize="24" Margin="20,0,0,0">Create Salesperson</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
+                    <ListBoxItem Name="SalesView">
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Sale</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
                     <ListBoxItem Name="Load">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>
