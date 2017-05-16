@@ -26,7 +26,7 @@
 
             <Setter Property="FontWeight" Value="Bold"/>
 
-            <Setter Property="Width" Value="150"/>
+            <Setter Property="Width" Value="160"/>
 
             <Setter Property="Margin" Value="5,5,5,5"/>
 
@@ -106,9 +106,9 @@
 
         <Grid.ColumnDefinitions>
 
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="900"/>
 
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="380"/>
 
         </Grid.ColumnDefinitions>
 
@@ -118,7 +118,7 @@
 
         <ListView 
 
-            Grid.Row="0" Grid.Column="0"
+            Grid.Row="0" Grid.Column="1"
 
                 ItemsSource="{Binding ItemViewModelCollection}" 
 
@@ -126,7 +126,7 @@
 
                 Visibility="{Binding ItemSelectorVisible}"
 
-                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender">
+                IsEnabled="{Binding ItemSelectorEnabled}" Background="Lavender" Margin="0,0,-70,0">
 
 
 
@@ -172,7 +172,7 @@
 
         <!-- Inner Grid has one column and three rows -->
 
-        <Grid Grid.Row="0" Grid.Column="1">
+        <Grid Grid.Row="0" Margin="0,0,0,0">
 
             <Grid.RowDefinitions>
 
@@ -188,33 +188,33 @@
 
             <!-- Properties (Details) -->
 
-            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite">
+            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Margin="0,0,0,0">
 
 
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,25,0,0" Orientation="Horizontal">
 
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
 
-                                   Text="{Binding ViewControlStates[Date].Description}"/>
+                                   Text="{Binding ViewControlStates[Date].Description}" Height="44"/>
 
                     <DatePicker IsEnabled="{Binding ViewControlStates[Date].Enabled}"
 
                                 Visibility="{Binding ViewControlStates[Date].VisibilityState}"
 
-                                Margin="5,5,5,5" Width="300"
+                                Margin="5,5,5,5" Width="650"
 
-                                Date="{Binding DetailsViewModel.Date, Mode=TwoWay}"  />
+                                Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" Height="44"  />
 
                 </StackPanel>
 
 
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
 
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
 
-                                   Text="{Binding ViewControlStates[Price].Description}"/>
+                                   Text="{Binding ViewControlStates[Price].Description}" Height="44"/>
 
                     <TextBox Style="{StaticResource TextBoxStyle}" 
 
@@ -222,13 +222,13 @@
 
                                  Visibility="{Binding ViewControlStates[Price].VisibilityState}"
 
-                                 Text="{Binding DetailsViewModel.Price, Mode=TwoWay}" />
+                                 Text="{Binding DetailsViewModel.Price, Mode=TwoWay}" Height="44" Width="650" />
 
                 </StackPanel>
 
 
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
 
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
 
@@ -242,7 +242,7 @@
 
                               ItemsSource="{Binding DetailsViewModel.CollectionCars}"
 
-                              SelectedItem="{Binding DetailsViewModel.SelectedCar, Mode=TwoWay}">
+                              SelectedItem="{Binding DetailsViewModel.SelectedCar, Mode=TwoWay}" Height="44" Width="650">
 
                         <ComboBox.ItemTemplate>
 
@@ -268,7 +268,7 @@
 
 
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
 
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
 
@@ -282,7 +282,7 @@
 
                             ItemsSource="{Binding DetailsViewModel.CollectionCustomers}" 
 
-                            SelectedItem="{Binding DetailsViewModel.SelectedCustomer, Mode=TwoWay}">
+                            SelectedItem="{Binding DetailsViewModel.SelectedCustomer, Mode=TwoWay}" Height="44" Width="650">
 
                         <ComboBox.ItemTemplate>
 
@@ -308,7 +308,7 @@
 
 
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
 
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
 
@@ -322,7 +322,7 @@
 
                             ItemsSource="{Binding DetailsViewModel.CollectionSalesperson}" 
 
-                            SelectedItem="{Binding DetailsViewModel.SelectedSalesperson, Mode=TwoWay}">
+                            SelectedItem="{Binding DetailsViewModel.SelectedSalesperson, Mode=TwoWay}" Height="44" Width="650">
 
                         <ComboBox.ItemTemplate>
 
