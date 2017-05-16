@@ -31,7 +31,20 @@ namespace MVVMStarter.Models.Domain.Car
         public string Licenseplate
         {
             get { return _Licenseplate; }
-            set { _Licenseplate = value; }
+            set
+            {
+                var orgValue = Licenseplate;
+
+                try
+                {
+                    Licenseplate = value;
+                }
+                catch (ValidationException e)
+                {
+                    PresentValidationError(e.Message, () => { Year = orgValue; });
+                }
+                OnPropertyChanged();
+            }
         }
 
         public string Brand
@@ -85,12 +98,6 @@ namespace MVVMStarter.Models.Domain.Car
 
 
 
-
-
-
-
-
-
         public override void SetDefaultValues()
         {
             _Licenseplate = "(License)";
@@ -104,6 +111,13 @@ namespace MVVMStarter.Models.Domain.Car
             _condition = "(condition)";
         }
 
+        #region INotifyPropertyChanged implementation
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        #endregion
 
     }
 }
