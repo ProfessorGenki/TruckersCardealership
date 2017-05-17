@@ -43,7 +43,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             get { return _observableCollectionCustomers; }
         }
 
-        public ObservableCollection<Salesperson.ItemViewModel> CollectionSalesPerson
+        public ObservableCollection<Salesperson.ItemViewModel> CollectionSalesperson
         {
             get { return _observableCollectionSalespersons; }
         }
@@ -76,7 +76,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
 
         public Salesperson.ItemViewModel SelectedSalesperson
         {
-            get { return GetSalesPersonItemViewModel(DomainObject.SalespersonKey); }
+            get { return GetSalespersonItemViewModel(DomainObject.SalespersonKey); }
             set
             {
                 if (value != null)
@@ -113,13 +113,13 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             return null; 
         }
 
-        private Salesperson.ItemViewModel GetSalesPersonItemViewModel(int key)
+        private Salesperson.ItemViewModel GetSalespersonItemViewModel(int key)
         {
-            foreach (var SalesPersonItemViewModel in _observableCollectionSalespersons)
+            foreach (var SalespersonItemViewModel in _observableCollectionSalespersons)
             {
-                if (SalesPersonItemViewModel.DomainObject.Key == key)
+                if (SalespersonItemViewModel.DomainObject.Key == key)
                 {
-                    return SalesPersonItemViewModel;
+                    return SalespersonItemViewModel;
                 }
             }
 

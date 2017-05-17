@@ -42,7 +42,7 @@ namespace MVVMStarter.Views.App
             }
             if (SalespersonView.IsSelected)
             {
-                AppFrame.Navigate(typeof(Domain.SalesPerson.View));
+                AppFrame.Navigate(typeof(Domain.Salesperson.View));
             }
             if (SalesView.IsSelected)
             {
