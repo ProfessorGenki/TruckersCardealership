@@ -1,6 +1,7 @@
 ﻿using MVVMStarter.Configuration.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
+using MVVMStarter.Validators.Domain.Customer;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -37,8 +38,12 @@ namespace MVVMStarter.Models.Domain.Customer
         }
         public int Phonenumber
         {
-            get { return _phonenumber; }
-            set { _phonenumber = value; }
+            get { return _phonenumber; }    
+            set
+            {
+                ValidationHandler.ThrowOnInvalid<int>(ValidationHandler.ValidatePhonenumber, value);
+                _phonenumber = value;
+            }
         }
         public string Email
         {

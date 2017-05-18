@@ -91,7 +91,7 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Compile Include="Models\Domain\Sale\Catalog.cs" />
     <Compile Include="Models\Domain\Sale\Sale.cs" />
-    <Compile Include="Validators\Domain\Car\CarValidator.cs" />
+    <Compile Include="Validators\Domain\Customer\Validator.cs" />
     <Compile Include="ViewModels\Domain\Customer\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Sale\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sale\ItemViewModel.cs" />

@@ -1,6 +1,8 @@
 ﻿using MVVMStarter.Configuration.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -31,20 +33,7 @@ namespace MVVMStarter.Models.Domain.Car
         public string Licenseplate
         {
             get { return _Licenseplate; }
-            set
-            {
-                var orgValue = Licenseplate;
-
-                try
-                {
-                    Licenseplate = value;
-                }
-                catch (ValidationException e)
-                {
-                    PresentValidationError(e.Message, () => { Year = orgValue; });
-                }
-                OnPropertyChanged();
-            }
+            set { _Licenseplate = value; }
         }
 
         public string Brand
@@ -95,6 +84,8 @@ namespace MVVMStarter.Models.Domain.Car
             set { _condition = value; }
         }
         #endregion
+
+       
 
 
 

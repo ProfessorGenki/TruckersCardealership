@@ -1,6 +1,8 @@
-﻿using MVVMStarter.Models.Base;
+﻿using MVVMStarter.Models.App;
+using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
 using System;
+using CarSelected = MVVMStarter.Models.Domain.Car;
 
 namespace MVVMStarter.Models.Domain.Sale
 {
@@ -12,12 +14,13 @@ namespace MVVMStarter.Models.Domain.Sale
 
         private DateTimeOffset _salesDate;
         private int _saleID;
+        
+
 
         public Sale()
         {
             SetDefaultValues();
         }
-
 
         public int CarKey
         {
@@ -37,6 +40,7 @@ namespace MVVMStarter.Models.Domain.Sale
             set { _salespersonKey = value; }
         }
 
+
         public DateTimeOffset SalesDate
         {
             get { return _salesDate; }
@@ -48,7 +52,7 @@ namespace MVVMStarter.Models.Domain.Sale
             get { return _saleID; }
             set { _saleID = value; }
         }
-
+         
         public override void SetDefaultValues()
         {
             _carKey = NullKey;
