@@ -66,13 +66,25 @@ namespace MVVMStarter.ViewModels.Domain.Customer
         public int Phonenumber
         {
             get { return DomainObject.Phonenumber; }
-            set { DomainObject.Phonenumber = value; OnPropertyChanged(); }
+            set
+            {
+                var orgValue = DomainObject.Phonenumber;
+                try
+                {
+                    DomainObject.Phonenumber = value;
+                }
+                catch (ValidationException e)
+                {
+                    PresentValidationError(e.Message, () => { Phonenumber = orgValue; });
+                }
+                OnPropertyChanged();
+            }
         }
+
         public string Email
         {
             get { return DomainObject.Email; }
-            set { DomainObject.Email = value; OnPropertyChanged(); }
-        }
+            set { OnPropertyChanged(); } }
         public string ID
         {
             get { return DomainObject.ID; }

@@ -1,6 +1,8 @@
 ﻿using MVVMStarter.Configuration.App;
+using MVVMStarter.Models.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
+
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -39,6 +41,47 @@ namespace MVVMStarter.Models.Domain.Salesperson
             _address = "Elisagårdsvej 5, 4000 Roskilde";
             _salespersonId = 0;
             _commission = 0;
+
         }
+
+        public double Commision
+        {
+            get
+            {
+                double commision = 0;
+                foreach (var salg in ObjectProvider.SaleCatalog.All)
+                {
+                    if (salg.SalespersonKey == Key)
+                    {
+                        Car.Car car = ObjectProvider.CarCatalog.Read(salg.CarKey);
+                        if (car != null)
+                        {
+                            double pris = car.Price;
+                            if (car.Price < 100000)
+                            {
+                                  commision = car.Price * 0.05;
+                            }
+                            else if (car.Price > 100000 && car.Price < 175000)
+                            {
+                                commision = car.Price * 0.08;
+                            }
+                            else
+                            {
+                                commision = car.Price * 0.15;
+                            }
+                        }
+                    } 
+                }
+                return commision;
+            }
+        }
+
+        //public double TotalCommision
+        //{
+
+        //}
+
+
     }
 }
+ 

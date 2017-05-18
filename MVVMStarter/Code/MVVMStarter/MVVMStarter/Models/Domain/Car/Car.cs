@@ -1,6 +1,8 @@
 ﻿using MVVMStarter.Configuration.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 /// <summary>
 /// TEMPLATE: You must 
@@ -83,11 +85,7 @@ namespace MVVMStarter.Models.Domain.Car
         }
         #endregion
 
-
-
-
-
-
+       
 
 
 
@@ -104,6 +102,13 @@ namespace MVVMStarter.Models.Domain.Car
             _condition = "(condition)";
         }
 
+        #region INotifyPropertyChanged implementation
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        #endregion
 
     }
 }

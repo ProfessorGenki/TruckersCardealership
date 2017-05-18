@@ -46,9 +46,6 @@ namespace MVVMStarter.ViewModels.Domain.Car
             }
         }
 
-
-
-
         public int ID
         {
             get { return DomainObject.ID; }

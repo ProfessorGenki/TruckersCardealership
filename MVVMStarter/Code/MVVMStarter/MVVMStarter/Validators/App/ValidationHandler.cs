@@ -10,7 +10,7 @@ namespace MVVMStarter.Validators.App
             return (isValid(value) ? null : new ValidationOutcome(message));
         }
 
-        public static void ThrowOnInvalid<TValue>(Func<TValue, ValidationOutcome> validator, TValue value)
+        internal static void ThrowOnInvalid<TValue>(Func<TValue, ValidationOutcome> validator, TValue value)
         {
             ValidationOutcome vo = validator(value);
             if (vo != null)
@@ -33,6 +33,8 @@ namespace MVVMStarter.Validators.App
             return Validate<string>(value, (v => v.Length <= maxLength), message);
         }
 
+       
+
         public static ValidationOutcome ValidateStringContains(string value, string containedString,
             [CallerMemberName] string propertyName = null)
         {
@@ -52,6 +54,11 @@ namespace MVVMStarter.Validators.App
         {
             string message = propertyName + " " + " must be a number between " + minValue + " and " + MaxValue;
             return Validate<int>(value, v => (v >= minValue && v <= MaxValue), message);
+        }
+
+        public static ValidationOutcome ValidatePhonenumber(int value) 
+        {
+            return ValidateIntInInterval(value, 10000000, 99999999);
         }
     }
 }
