@@ -173,17 +173,6 @@ namespace MVVMStarter.ViewModels.Domain.Salesperson
                 OnPropertyChanged();
             }
         }
-
-        public double Commission
-        {
-            get { return DomainObject.Commission; }
-            set
-            {
-                DomainObject.Commission = value;
-                OnPropertyChanged();
-            }
-        }
-
         public int SalespersonID
         {
             get { return DomainObject.SalespersonID; }
@@ -191,6 +180,14 @@ namespace MVVMStarter.ViewModels.Domain.Salesperson
             {
                 DomainObject.SalespersonID = value;
                 OnPropertyChanged();
+            }
+        }
+        public double Commision
+        {
+            get
+            {
+                return DomainObject.Commision;
+                
             }
         }
 
