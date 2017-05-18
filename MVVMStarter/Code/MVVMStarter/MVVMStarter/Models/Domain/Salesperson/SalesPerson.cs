@@ -29,8 +29,6 @@ namespace MVVMStarter.Models.Domain.Salesperson
         public string Phone { get { return _phone; } set { _phone = value; } }
         public string Address { get { return _address; } set { _address = value; } }
         public int SalespersonID { get { return _salespersonId; } set { _salespersonId = value; } }
-        public double Commission { get { return _commission; } set { _commission = value; } }
-
 
 
         public override void SetDefaultValues()
@@ -59,16 +57,17 @@ namespace MVVMStarter.Models.Domain.Salesperson
                             double pris = car.Price;
                             if (car.Price < 100000)
                             {
-                                  commision = car.Price * 0.05;
+                                  commision += car.Price * 0.05;
                             }
                             else if (car.Price > 100000 && car.Price < 175000)
                             {
-                                commision = car.Price * 0.08;
+                                commision += car.Price * 0.08;
                             }
                             else
                             {
-                                commision = car.Price * 0.15;
+                                commision += car.Price * 0.15;
                             }
+                            
                         }
                     } 
                 }
