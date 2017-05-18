@@ -37,7 +37,7 @@ namespace MVVMStarter.ViewModels.Domain.Salesperson
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Address));
-            nonFixedKeyProperties.Add(nameof(SalespersonClass.Commission));
+            nonFixedKeyProperties.Add(nameof(SalespersonClass.Commision));
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Phone));
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Email));
 
