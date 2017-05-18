@@ -120,7 +120,7 @@
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="Commision" Height="44"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Commision].Enabled}"
+
                                  Visibility="{Binding ViewControlStates[Commision].VisibilityState}"
                                  Text="{Binding DetailsViewModel.Commision, Mode=TwoWay}" Height="44" Width="650" />
                 </StackPanel>
