@@ -14,6 +14,8 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             fixedProperties.Add("Car");
             fixedProperties.Add("Customer");
             fixedProperties.Add("Salesperson");
+            fixedProperties.Add("Commision");
+
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) view properties here

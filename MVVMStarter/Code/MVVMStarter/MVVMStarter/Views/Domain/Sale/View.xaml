@@ -116,14 +116,7 @@
                                  Text="{Binding DetailsViewModel.Price, Mode=TwoWay}" Height="44" Width="650" />
                 </StackPanel>
 
-                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
-                    <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="Commision" Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}" 
 
-                                 Visibility="{Binding ViewControlStates[Commision].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Commision, Mode=TwoWay}" Height="44" Width="650" />
-                </StackPanel>
 
 
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
