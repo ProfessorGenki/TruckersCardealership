@@ -20,18 +20,9 @@ namespace MVVMStarter.Views.App
             AppFrame.Navigate(typeof(OpeningView));
         }
 
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-            AppSplitView.IsPaneOpen = !AppSplitView.IsPaneOpen;
-        }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
-            if (ImageView.IsSelected)
-            {
-                AppFrame.Navigate(typeof(App.ImageView));
-            }
             if (CustomerView.IsSelected)
             {
                 AppFrame.Navigate(typeof(Domain.Customer.View));

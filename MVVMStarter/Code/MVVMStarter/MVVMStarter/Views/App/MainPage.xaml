@@ -12,81 +12,59 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <RelativePanel Grid.Row="0" >
-            <StackPanel Orientation="Horizontal">
-                <Button Name="HamburgerButton" 
-                    RelativePanel.AlignLeftWithPanel="True"
-                    FontFamily="Segoe MDL2 Assets"
-                    FontSize="40" 
-                    Content="&#xE700;" 
-                    Click="HamburgerButton_Click" />
-                <Image Width="100" Height="50" Margin="10,0,0,0"
-                       Source="ms-appx:///Assets/App/Logo120x60.jpg"/>
-            </StackPanel>
+        <RelativePanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <ListBox Grid.Row="0" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="Auto">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBoxItem Name="CustomerView">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Customer</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="CarView">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Car</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="SalespersonView">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Salesperson</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="SalesView">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Sale</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="Load">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Load</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="Save">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Save.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Save</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Name="Quit">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Quit.png"/>-->
+                        <TextBlock FontWeight="Bold" FontSize="30" Margin="0,0,0,0">Quit</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
         </RelativePanel>
 
-        <SplitView Grid.Row="1" 
-                   Name="AppSplitView"
-                   DisplayMode="CompactInline" 
-                   OpenPaneLength="256"
-                   CompactPaneLength="60">
-            <SplitView.Pane>
-                <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Name="ImageView">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Image.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Images</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="CustomerView">
-                        <StackPanel Orientation="Horizontal">
-                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Customer</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="CarView">
-                        <StackPanel Orientation="Horizontal">
-                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Car</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="SalespersonView">
-                        <StackPanel Orientation="Horizontal">
-                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Create Salesperson</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="SalesView">
-                        <StackPanel Orientation="Horizontal">
-                            <!--<Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>-->
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Sale</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="Load">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Load.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Load</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="Save">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Save.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Save</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="Quit">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/App/Quit.png"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Quit</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                </ListBox>
-            </SplitView.Pane>
+        <Frame Name="AppFrame" Grid.Row="1"></Frame>
 
-            <SplitView.Content>
-                <Frame Name="AppFrame"></Frame>
-            </SplitView.Content>
-
-        </SplitView>
     </Grid>
 </Page>

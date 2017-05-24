@@ -75,13 +75,34 @@
         <!-- Inner Grid has one column and three rows -->
         <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="100"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
+            <!-- Radio Buttons (Mode) -->
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Choose an option:" Margin="0,5,5,0"/>
+                <ComboBox HorizontalAlignment="Center" PlaceholderText="Choose" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem>Create</ComboBoxItem>
+                    <ComboBoxItem>Update</ComboBoxItem>
+                    <ComboBoxItem>Delete</ComboBoxItem>
+                </ComboBox>
+                <!--<RadioButton Content="Create" Style="{StaticResource RadioButtonStyle}"
+                             Command="{Binding SelectCreateCommand}"/>
+
+                <RadioButton Content="Update" Style="{StaticResource RadioButtonStyle}"
+                             Command="{Binding SelectUpdateCommand}"/>
+
+                <RadioButton Content="Delete" Style="{StaticResource RadioButtonStyle}"
+                             Command="{Binding SelectDeleteCommand}"/>
+
+                <RadioButton Content="Read" Style="{StaticResource RadioButtonStyle}" IsChecked="True" 
+                             Command="{Binding SelectReadCommand}"/>-->
+            </StackPanel>
+
             <!-- Properties (Details) -->
-            <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Grid.RowSpan="1">
+            <StackPanel Grid.Row="1" Grid.Column="0" Background="AntiqueWhite" Grid.RowSpan="1">
 
                 <!--MYPROPERTY Name-->
                 <StackPanel Margin="25,25,0,0" Orientation="Horizontal">
@@ -136,8 +157,8 @@
             </StackPanel>
 
             <!-- Buttons (Action) -->
-            <StackPanel Grid.Row="1" Grid.Column="0"
-                Orientation="Horizontal" BorderBrush="Black" BorderThickness="2,2,2,0">
+            <StackPanel Grid.Row="2" Grid.Column="0"
+                Orientation="Horizontal">
 
                 <!--Create button-->
                 <Button Content="Create" Style="{StaticResource ButtonStyle}"
@@ -157,22 +178,6 @@
                         Visibility="{Binding ViewControlStates[Delete].VisibilityState}"
                         Command="{Binding DeleteCommand}"/>
 
-            </StackPanel>
-
-            <!-- Radio Buttons (Mode) -->
-            <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" BorderBrush="Black" BorderThickness="2">
-
-                <RadioButton Content="Create" Style="{StaticResource RadioButtonStyle}"
-                             Command="{Binding SelectCreateCommand}"/>
-
-                <RadioButton Content="Update" Style="{StaticResource RadioButtonStyle}"
-                             Command="{Binding SelectUpdateCommand}"/>
-
-                <RadioButton Content="Delete" Style="{StaticResource RadioButtonStyle}"
-                             Command="{Binding SelectDeleteCommand}"/>
-
-                <RadioButton Content="Read" Style="{StaticResource RadioButtonStyle}" IsChecked="True" 
-                             Command="{Binding SelectReadCommand}"/>
             </StackPanel>
         </Grid>
     </Grid>
