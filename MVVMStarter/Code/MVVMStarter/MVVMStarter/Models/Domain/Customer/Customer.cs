@@ -38,7 +38,7 @@ namespace MVVMStarter.Models.Domain.Customer
         }
         public int Phonenumber
         {
-            get { return _phonenumber; }    
+            get { return _phonenumber; }
             set
             {
                 ValidationHandler.ThrowOnInvalid<int>(ValidationHandler.ValidatePhonenumber, value);
@@ -60,10 +60,10 @@ namespace MVVMStarter.Models.Domain.Customer
 
         public override void SetDefaultValues()
         {
-            _name = "Name";
-            _adress = "kildevej 19, 4000 Roskilde";
-            _phonenumber = 53535353;
-            _email = "Email@";
+            _name = "Bob Jones";
+            _adress = "kildevej 69, 4000 Roskilde";
+            _phonenumber = 69696969;
+            _email = "Example@Email.com";
             ID = "CustomerID";
         }
 

@@ -7,7 +7,7 @@ using SalespersonClass = MVVMStarter.Models.Domain.Salesperson.Salesperson;
 using System;
 using MVVMStarter.Models.Domain.Sale;
 
-namespace MVVMStarter.ViewModels.Domain.Sale 
+namespace MVVMStarter.ViewModels.Domain.Sale
 
 {
 
@@ -37,7 +37,7 @@ namespace MVVMStarter.ViewModels.Domain.Sale
 
         public override int FontSize
         {
-            get { return 14; }
+            get { return 18; }
         }
 
         #region Methods

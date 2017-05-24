@@ -22,7 +22,7 @@ namespace MVVMStarter.ViewModels.Domain.Customer
 
         public override int FontSize
         {
-            get { return 25; }
+            get { return 18; }
         }
 
         //public override string ImageSource

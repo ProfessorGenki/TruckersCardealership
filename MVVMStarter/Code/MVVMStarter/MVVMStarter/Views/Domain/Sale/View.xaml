@@ -22,7 +22,7 @@
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Normal"/>
             <Setter Property="Width" Value="650"/>
-            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="Margin" Value="25,5,5,5"/>
         </Style>
         <Style x:Key="TextBlockInSubComboStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
@@ -31,12 +31,6 @@
             <Setter Property="Margin" Value="5,5,5,5"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style x:Key="TextBoxStyle" TargetType="TextBox">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Width" Value="160"/>
-            <Setter Property="Margin" Value="5,5,5,5"/>
         </Style>
         <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
             <Setter Property="FontSize" Value="24"/>
@@ -50,7 +44,7 @@
             <Setter Property="VerticalAlignment" Value="Top"/>
         </Style>
     </Page.Resources>
-    
+
     <!-- Outermost Grid has two columns and one row -->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -85,7 +79,7 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        
+
         <!-- Inner Grid has one column and three rows -->
         <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,0">
             <Grid.RowDefinitions>
@@ -96,7 +90,7 @@
 
             <!-- Properties (Details) -->
             <StackPanel Grid.Row="0" Grid.Column="0" Background="AntiqueWhite" Margin="0,0,0,0">
-                
+
                 <StackPanel Margin="25,25,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Date].Description}" Height="44"/>
@@ -106,18 +100,7 @@
                                 Date="{Binding DetailsViewModel.Date, Mode=TwoWay}" Height="44"  />
                 </StackPanel>
 
-
-                <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
-                    <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Price].Description}" Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Price].Enabled}"
-                                 Visibility="{Binding ViewControlStates[Price].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Price, Mode=TwoWay}" Height="44" Width="650" />
-                </StackPanel>
-
-
-
+                <StackPanel Margin="25,0,0,0" Orientation="Horizontal"/>
 
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
@@ -143,8 +126,6 @@
                     </ComboBox>
 
                 </StackPanel>
-
-
 
                 <StackPanel Margin="25,0,0,0" Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
@@ -226,19 +207,19 @@
 
             <!-- Radio Buttons (Mode) -->
             <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" BorderBrush="Black" BorderThickness="2">
-                
+
                 <RadioButton Content="Create" Style="{StaticResource RadioButtonStyle}"
                              Visibility="{Binding ViewControlStates[Create].VisibilityState}"
                              Command="{Binding SelectCreateCommand}"/>
-                
+
                 <RadioButton Content="Update" Style="{StaticResource RadioButtonStyle}"
                              Visibility="{Binding ViewControlStates[Update].VisibilityState}"
                              Command="{Binding SelectUpdateCommand}"/>
-                
+
                 <RadioButton Content="Delete" Style="{StaticResource RadioButtonStyle}"
                              Visibility="{Binding ViewControlStates[Delete].VisibilityState}"
                              Command="{Binding SelectDeleteCommand}"/>
-                
+
                 <RadioButton Content="Read" Style="{StaticResource RadioButtonStyle}" IsChecked="True" 
                              Command="{Binding SelectReadCommand}"/>
             </StackPanel>

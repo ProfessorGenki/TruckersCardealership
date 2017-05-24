@@ -15,12 +15,10 @@ namespace MVVMStarter.ViewModels.Domain.Sale
             fixedProperties.Add("Customer");
             fixedProperties.Add("Salesperson");
             fixedProperties.Add("Commision");
-
+            fixedProperties.Add("Date");
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) view properties here
-            nonFixedKeyProperties.Add("Date");
-            nonFixedKeyProperties.Add("Price");
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);

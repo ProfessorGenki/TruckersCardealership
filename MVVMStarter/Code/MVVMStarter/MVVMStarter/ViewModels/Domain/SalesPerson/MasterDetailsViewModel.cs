@@ -31,13 +31,13 @@ namespace MVVMStarter.ViewModels.Domain.Salesperson
 
             List<string> fixedProperties = new List<string>();
             // Add names of "fixed" (cannot be changed after creation) properties here
-            fixedProperties.Add(nameof(SalespersonClass.SalespersonID));
             fixedProperties.Add(nameof(SalespersonClass.Name));
+            fixedProperties.Add(nameof(SalespersonClass.SalespersonID));
+            fixedProperties.Add(nameof(SalespersonClass.Commision));
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Address));
-            nonFixedKeyProperties.Add(nameof(SalespersonClass.Commision));
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Phone));
             nonFixedKeyProperties.Add(nameof(SalespersonClass.Email));
 

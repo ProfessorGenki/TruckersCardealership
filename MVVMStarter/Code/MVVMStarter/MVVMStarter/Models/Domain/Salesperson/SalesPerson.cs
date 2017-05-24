@@ -21,7 +21,6 @@ namespace MVVMStarter.Models.Domain.Salesperson
         private string _phone;
         private string _address;
         private int _salespersonId;
-        private double _commission;
 
 
         public string Name { get { return _name; } set { _name = value; } }
@@ -30,16 +29,14 @@ namespace MVVMStarter.Models.Domain.Salesperson
         public string Address { get { return _address; } set { _address = value; } }
         public int SalespersonID { get { return _salespersonId; } set { _salespersonId = value; } }
 
-
         public override void SetDefaultValues()
         {
             _name = "John Doe";
             _email = "Example@Email.com";
-            _phone = "+45 23 95 40 72";
+            _phone = "23954072";
             _address = "Elisagårdsvej 5, 4000 Roskilde";
             _salespersonId = 0;
-            _commission = 0;
-
+            Key = NullKey;
         }
 
         public double Commision
@@ -57,7 +54,7 @@ namespace MVVMStarter.Models.Domain.Salesperson
                             double pris = car.Price;
                             if (car.Price < 100000)
                             {
-                                  commision += car.Price * 0.05;
+                                commision += car.Price * 0.05;
                             }
                             else if (car.Price > 100000 && car.Price < 175000)
                             {
@@ -67,9 +64,9 @@ namespace MVVMStarter.Models.Domain.Salesperson
                             {
                                 commision += car.Price * 0.15;
                             }
-                            
+
                         }
-                    } 
+                    }
                 }
                 return commision;
             }
@@ -83,4 +80,3 @@ namespace MVVMStarter.Models.Domain.Salesperson
 
     }
 }
- 

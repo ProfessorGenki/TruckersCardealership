@@ -14,8 +14,6 @@ namespace MVVMStarter.Models.Domain.Sale
 
         private DateTimeOffset _salesDate;
         private int _saleID;
-        
-
 
         public Sale()
         {
@@ -52,7 +50,7 @@ namespace MVVMStarter.Models.Domain.Sale
             get { return _saleID; }
             set { _saleID = value; }
         }
-         
+
         public override void SetDefaultValues()
         {
             _carKey = NullKey;
