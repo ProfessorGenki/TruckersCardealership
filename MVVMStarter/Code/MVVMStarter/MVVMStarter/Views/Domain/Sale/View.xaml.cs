@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVMStarter.ViewModels.Domain.Sale;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,28 @@ namespace MVVMStarter.Views.Domain.Sale
         public View()
         {
             this.InitializeComponent();
+        }
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem item = (ComboBoxItem)e.AddedItems[0];
+
+            string selected = (string)item.Content;
+
+            if (selected == "Create")
+            {
+                ((MasterDetailsViewModel)DataContext).SelectCreateCommand.Execute(null);
+            }
+
+            if (selected == "Update")
+            {
+                ((MasterDetailsViewModel)DataContext).SelectUpdateCommand.Execute(null);
+            }
+
+            if (selected == "Delete")
+            {
+                ((MasterDetailsViewModel)DataContext).SelectDeleteCommand.Execute(null);
+
+            }
         }
     }
 }

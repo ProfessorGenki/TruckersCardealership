@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
 
         <RelativePanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <ListBox Grid.Row="0" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="Auto">
+            <ListBox Background="White" Grid.Row="0" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="Auto">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Horizontal"/>
